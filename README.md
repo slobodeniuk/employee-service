@@ -21,9 +21,9 @@ Requirement: not to use EntityFramework, only ADO.NET
 
 **Option #1. Using PowerShell script (Recommended)**
 
-To initialize the SQL Server Docker container and database, run:
-    ``` ps
-    .\Scripts\DbInit.ps1
+To initialize the SQL Server Docker container and database, run from project root:   
+    ```
+    powershell .\Scripts\DbInit.ps1
     ```
     
     The script will:

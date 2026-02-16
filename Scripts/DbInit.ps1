@@ -30,11 +30,11 @@ while($continuePoll -eq $true)
 
 
 echo "Creating EmployeesDB and seeding with initial data..."
-Invoke-Sqlcmd -InputFile ./CreateDBInsertValuesScript.sql -ConnectionString $masterConnectionString
+Invoke-Sqlcmd -InputFile "$PSScriptRoot/CreateDBInsertValuesScript.sql" -ConnectionString $masterConnectionString
 
 echo "Creating GetEmployeeWithHierarchyById stored procedure..."
-Invoke-Sqlcmd -InputFile ./dbo.GetEmployeeWithHierarchyById.sql -ConnectionString $connectionString
+Invoke-Sqlcmd -InputFile "$PSScriptRoot/dbo.GetEmployeeWithHierarchyById.sql" -ConnectionString $connectionString
 echo "Creating EnableEmployee stored procedure..."
-Invoke-Sqlcmd -InputFile ./dbo.EnableEmployee.sql -ConnectionString $connectionString
+Invoke-Sqlcmd -InputFile "$PSScriptRoot/dbo.EnableEmployee.sql" -ConnectionString $connectionString
 
 echo "DB Initialization has been finished successfully"
